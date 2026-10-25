@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #7c3aed;
+  border-radius: 3px;
+}
+
+/* Custom Cursor */
+.cursor-inner {
+  width: 8px;
+  height: 8px;
+  background-color: #c084fc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.cursor-outer {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(192, 132, 252, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9998;
+  pointer-events: none;
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+
+/* Light mode overrides */
+body.light-mode {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+body.light-mode header nav {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(226, 232, 240, 0.8) !important;
+}
+body.light-mode .bg-zinc-900 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+body.light-mode .bg-zinc-950 {
+  background-color: #f1f5f9 !important;
+}
+body.light-mode .text-zinc-100,
+body.light-mode .text-white {
+  color: #0f172a !important;
+}
+body.light-mode .text-zinc-300,
+body.light-mode .text-zinc-400 {
+  color: #475569 !important;
+}
+body.light-mode .border-zinc-800 {
+  border-color: #e2e8f0 !important;
+}
+
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientAnimation 6s ease infinite;
+}
